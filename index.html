@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Love ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Italiana&family=Tenor+Sans&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Opening Screen -->
+  <div id="opening-screen" class="screen active">
+    <div class="ornamental-border"></div>
+    <div class="opening-content">
+      <div class="monogram">K</div>
+      <h1 class="opening-title">
+        <span class="subtitle-text">For My Dearest</span>
+        <span class="main-text">Kaavya</span>
+      </h1>
+      <div class="decorative-line"></div>
+      <p class="opening-tagline">A Testament of Our Love</p>
+      <button id="begin-btn" class="elegant-btn">Begin</button>
+    </div>
+  </div>
+
+  <!-- Welcome Screen -->
+  <div id="welcome-screen" class="screen">
+    <div class="welcome-container">
+      <h2 class="section-title">My Beloved</h2>
+      <div class="decorative-line short"></div>
+      <p class="elegant-paragraph">
+        Before I ask you the question that has been in my heart,<br>
+        let us revisit the precious moments that brought us here.
+      </p>
+      <button id="start-quiz-btn" class="elegant-btn">Continue</button>
+    </div>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quiz-screen" class="screen">
+    <div class="quiz-wrapper">
+      <div class="progress-indicator">
+        <div class="progress-track">
+          <div class="progress-line" id="progress-line"></div>
+        </div>
+        <div class="progress-text" id="progress-text">Question 1 of 7</div>
+      </div>
+
+      <div class="question-container">
+        <h3 class="question-title" id="question-title"></h3>
+        <div class="options-container" id="options-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wrong Answer Overlays -->
+  <div id="wrong-overlay-1" class="overlay wrong-overlay">
+    <div class="wrong-container">
+      <h2 class="wrong-heading">You don't love me anymore?! 😭😭😭</h2>
+      <p class="wrong-subtext">How could you forget our special moment?!</p>
+      <div class="gif-wrapper">
+        <img src="https://media.giphy.com/media/d2lcHJTG5Tscg/giphy.gif" alt="Sad" class="wrong-gif">
+      </div>
+      <p class="wrong-retry">I'm heartbroken... but I'll give you another chance 💔</p>
+    </div>
+  </div>
+
+  <div id="wrong-overlay-2" class="overlay wrong-overlay">
+    <div class="wrong-container">
+      <h2 class="wrong-heading">My heart is SHATTERED! 💔😭</h2>
+      <p class="wrong-subtext">Did you already forget about us?!</p>
+      <div class="gif-wrapper">
+        <img src="https://media.giphy.com/media/L95W4wv8nnb9K/giphy.gif" alt="Crying" class="wrong-gif">
+      </div>
+      <p class="wrong-retry">I'm literally crying... please try again 😢💕</p>
+    </div>
+  </div>
+
+  <div id="wrong-overlay-3" class="overlay wrong-overlay">
+    <div class="wrong-container">
+      <h2 class="wrong-heading">I CAN'T BELIEVE THIS! 😱💔</h2>
+      <p class="wrong-subtext">This was THE most important moment!</p>
+      <div class="gif-wrapper">
+        <img src="https://media.giphy.com/media/OPU6wzx8JrHna/giphy.gif" alt="Dramatic" class="wrong-gif">
+      </div>
+      <p class="wrong-retry">Okay okay, one more chance... because I love you 💝</p>
+    </div>
+  </div>
+
+  <!-- Celebration Overlay for Yes -->
+  <div id="celebration-overlay" class="celebration-overlay">
+    <div class="celebration-content">
+      <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Celebration" class="celebration-gif">
+    </div>
+  </div>
+
+  <!-- Transition & Valentine Screen (same screen, different phases) -->
+  <div id="valentine-screen" class="screen">
+    <!-- Phase 1: Transition Text -->
+    <div id="transition-phase" class="transition-phase">
+      <p class="transition-line" id="line-1">And now...</p>
+      <p class="transition-line" id="line-2">For the final question...</p>
+      <p class="transition-hint" id="hint">(Psst... there's only one right answer)</p>
+    </div>
+
+    <!-- Phase 2: Valentine Question -->
+    <div id="question-phase" class="question-phase">
+      <div class="valentine-container">
+        <h2 class="valentine-question">
+          <span class="question-line">Will you be</span>
+          <span class="question-line emphasis">my Valentine?</span>
+        </h2>
+        <div class="valentine-actions">
+          <button id="yes-btn" class="choice-btn yes-choice">Yes, Forever</button>
+          <button id="no-btn" class="choice-btn no-choice">No</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 3: Final Message -->
+    <div id="message-phase" class="message-phase">
+      <div class="final-container">
+        <!-- FIRST: Love Letter Paragraph -->
+        <div class="message-content">
+          <p class="love-letter">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur.
+          </p>
+          <div class="letter-signature">
+            <p class="signature-line">With all my love,</p>
+            <p class="signature-name">Yours Always</p>
+          </div>
+        </div>
+
+        <div class="scroll-hint">
+          <p class="scroll-text">↓ Scroll down for more ↓</p>
+        </div>
+
+        <!-- SECOND: Presenting My Little Princess -->
+        <div class="presenting-section">
+          <p class="presenting-text">Presenting...</p>
+        </div>
+
+        <div class="my-section">
+          <p class="my-text">My</p>
+        </div>
+
+        <div class="princess-section">
+          <p class="princess-text">Little Princess</p>
+        </div>
+
+        <!-- THIRD: Timeline Photos -->
+        <div class="timeline-container">
+          <div class="timeline" id="timeline">
+            <!-- Photos will be inserted here by JS -->
+          </div>
+        </div>
+
+        <div class="love-message">
+          <p class="love-text">I Love You</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
