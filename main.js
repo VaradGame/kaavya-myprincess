@@ -5,18 +5,18 @@ import confetti from 'canvas-confetti'
 const quizQuestions = [
     {
         question: "When did we first talk?",
-        answers: ["November 11", "November 10", "November 12", "November 15"],
-        correct: 0
+        answers: ["November 10", "November 15", "November 11", "November 12"],
+        correct: 2
     },
     {
         question: "When did we first speak on a call?",
-        answers: ["May 4", "May 5", "May 6", "May 7"],
-        correct: 1
+        answers: ["May 5", "May 4", "May 7", "May 6"],
+        correct: 0
     },
     {
         question: "When did we hold hands for the first time?",
-        answers: ["April 26", "April 27", "April 28", "April 25"],
-        correct: 1
+        answers: ["April 25", "April 26", "April 28", "April 27"],
+        correct: 3
     },
     {
         question: "When was our first hug?",
@@ -25,18 +25,18 @@ const quizQuestions = [
     },
     {
         question: "When did you first get feelings for me?",
-        answers: ["August 25", "August 26", "August 27", "August 24"],
-        correct: 1
+        answers: ["August 24", "August 27", "August 25", "August 26"],
+        correct: 3
     },
     {
         question: "When was our first kiss?",
-        answers: ["August 10", "August 11", "August 12", "August 9"],
-        correct: 1
+        answers: ["August 9", "August 10", "August 11", "August 12"],
+        correct: 2
     },
     {
         question: "When did we start dating?",
-        answers: ["May 5", "May 6", "May 7", "May 8"],
-        correct: 1
+        answers: ["May 7", "May 8", "May 5", "May 6"],
+        correct: 3
     }
 ];
 
@@ -433,7 +433,7 @@ function createTimeline() {
 
         const img = document.createElement('img');
         img.className = 'timeline-photo';
-        img.src = `./img/${imageName}`;
+        img.src = `/img/${imageName}`;
         img.alt = `Memory ${index + 1}`;
 
         frame.appendChild(img);
