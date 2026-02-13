@@ -433,7 +433,7 @@ function createTimeline() {
 
         const img = document.createElement('img');
         img.className = 'timeline-photo';
-        img.src = `/img/${imageName}`;
+        img.src = `./img/${imageName}`;
         img.alt = `Memory ${index + 1}`;
 
         frame.appendChild(img);
